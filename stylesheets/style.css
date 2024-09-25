@@ -29,7 +29,6 @@ main {
   flex-direction: row;
   border-radius: 1rem;
   box-shadow: 4px 5px 8px 0px;
-  max-width: 53vw;
   background-color: white;
 }
 
@@ -54,10 +53,12 @@ article#content {
     font-size: 1.25rem;
     line-height: 2rem;
     color: var(--darkGrayishBlue);
+    max-width: 28ch;
   }
 
   p {
     margin: 0;
+    max-width: 45ch;
   }
 }
 
@@ -101,6 +102,11 @@ article#content {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.img-clickable:hover {
+  cursor: pointer;
 }
 
 .img-michelle {
@@ -113,14 +119,21 @@ article#content {
   object-fit: contain;
 }
 
-.socials:not(:active) {
-  p {
-    display: none;
-  }
-
-  img {
-    display: none;
-  }
+#popover-socials {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--darkGrayishBlue);
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  color: var(--grayishBlue);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  position: absolute;
+  overflow: hidden;
 }
 
 .attribution {
