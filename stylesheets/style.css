@@ -119,21 +119,41 @@ article#content {
   object-fit: contain;
 }
 
+[popover] {
+  width: 200px;
+  height: 100px;
+  top: 15%;
+  left: 48.5%;
+  overflow: hidden;
+  background-color: transparent;
+  border: 0;
+}
+
 #popover-socials {
+  background-color: var(--darkGrayishBlue);
+  border-radius: 0.5rem;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--darkGrayishBlue);
-  border: 0;
-  border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   color: var(--grayishBlue);
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  position: absolute;
+  letter-spacing: 0.3rem;
   overflow: hidden;
+}
+
+[popover]::after {
+  content: "";
+  position: absolute;
+  /* top: 47%; */
+  /* position the arrow */
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 10px solid var(--darkGrayishBlue);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
 }
 
 .attribution {
